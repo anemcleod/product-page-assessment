@@ -1,4 +1,6 @@
 
+import Qty from './qty';
+
 const Product = ({product}) => {
 
     return (
@@ -67,7 +69,9 @@ const Product = ({product}) => {
                                             <div className="product-option" key={index}>
                                                 <div>{product.options[option].label}</div>
                                                 <div>{`${product.options[option].price.currency.symbol} ${product.options[option].price.value}`}</div>
-                                                <div>QTY</div>
+                                                <Qty
+                                                    min={0}
+                                                    max ={3}/>
                                             </div>
                                         )
                                     })
