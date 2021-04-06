@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
-import plus from '../assets/icons/plus.png';
-import minus from '../assets/icons/minus.png';
+import plus from '../../assets/icons/plus.png';
+import minus from '../../assets/icons/minus.png';
 
-const Qty = ({min, max}) => {
+const Qty = ({min, max, step}) => {
     const [quantity, setQuantity] = useState(min);
     console.log(quantity)
     const count = (e) => {
@@ -14,7 +14,7 @@ const Qty = ({min, max}) => {
        e.preventDefault();
         setQuantity(prevState => {
             if(prevState > min){
-                return prevState-1;
+                return prevState-step;
             } 
             return prevState   
         });
@@ -24,7 +24,7 @@ const Qty = ({min, max}) => {
         e.preventDefault();
         setQuantity(prevState => {
             if(prevState < max){
-                return prevState+1;
+                return prevState+step;
             }  
             return prevState  
         });
