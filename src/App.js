@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Product from './components/product';
 import Loader from './components/loader';
 
+import './assets/style.sass';
+
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);

@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 
+import plus from '../assets/icons/plus.png';
+import minus from '../assets/icons/minus.png';
+
 const Qty = ({min, max}) => {
     const [quantity, setQuantity] = useState(min);
     console.log(quantity)
@@ -10,7 +13,7 @@ const Qty = ({min, max}) => {
    const decrement = (e) => {
        e.preventDefault();
         setQuantity(prevState => {
-            if(prevState > 0){
+            if(prevState > min){
                 return prevState-1;
             } 
             return prevState   
@@ -20,7 +23,7 @@ const Qty = ({min, max}) => {
     const increment = (e) => {
         e.preventDefault();
         setQuantity(prevState => {
-            if(prevState < 3){
+            if(prevState < max){
                 return prevState+1;
             }  
             return prevState  
@@ -32,7 +35,7 @@ const Qty = ({min, max}) => {
             <button 
                 className={`count-btn ${quantity === min ? 'disabled' : ''}`}
                 onClick={decrement}>
-                -
+               <img src={minus} alt="minus"/>
             </button>
             <input 
                 className="hide-button"
@@ -44,7 +47,7 @@ const Qty = ({min, max}) => {
              <button 
                 className={`count-btn ${quantity === max ? 'disabled' : ''}`}
                 onClick={increment}>
-                +
+                <img src={plus} alt="plus"/>
             </button>
         </form>
     )
