@@ -7,15 +7,15 @@ const Vendor = () => {
     return (
         <div className="vendor-details">
             <div>
-                <img src={shield}/>
+                <img src={shield} alt="shield"/>
                 <span>Trade Assurance</span> protects your Alibaba.com orders
             </div>
 
             <div>
                 Payments:
-                <img src={visa}/>
-                <img src={mastercard}/>
-                <img src={applepay}/>
+                <img src={visa} alt="visa"/>
+                <img src={mastercard} alt="mastercard"/>
+                <img src={applepay} alt="applepay"/>
             </div>
             
             <div>Alibaba.com Logistics</div>

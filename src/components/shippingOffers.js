@@ -4,12 +4,12 @@ import arrow from '../assets/icons/arrow_right.png';
 const Offers = () => {
     return (
         <div className="shipping-offers">
-            <img src={marchexpo}/>
+            <img src={marchexpo} alt="march expo"/>
             <ul>
                 <li>Free shipping (up to $40)</li>
                 <li>On-time delivery guaranteed</li>
             </ul>
-            <img src={arrow}/>
+            <img src={arrow} alt="arrow"/>
     </div>
     )
 }

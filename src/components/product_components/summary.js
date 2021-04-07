@@ -10,12 +10,12 @@ const Summary = ({summary}) => {
             }
             {
                 summary.in_stock ? (
-                    <div><img src={check}/>In Stock</div>
+                    <div><img src={check} alt="check"/>In Stock</div>
                 ) : null 
             }
             {
                 summary.fast_dispatch ? (
-                    <div><img src={check}/>Fast Dispatch</div>
+                    <div><img src={check} alt="check"/>Fast Dispatch</div>
                 ) : null 
             }
         
