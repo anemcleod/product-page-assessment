@@ -7,9 +7,9 @@ const Details = ({product}) => {
             {
                 product.tags.map((tag, index) => {
                     return (
-                    <div className="product-tags" key={index}>
+                    <span className="product-tags" key={index}>
                         {tag}
-                    </div>
+                    </span>
                     )
                 })
             }

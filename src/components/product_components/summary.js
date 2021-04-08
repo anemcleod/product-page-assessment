@@ -5,17 +5,17 @@ const Summary = ({summary}) => {
         <div className="product-props">
             {
                 summary.ready_to_ship ? (
-                    <div>Ready to Ship</div>
+                    <div className="product-prop primary-prop">Ready to Ship</div>
                 ) : null 
             }
             {
                 summary.in_stock ? (
-                    <div><img src={check} alt="check"/>In Stock</div>
+                    <div className="product-prop secondary-prop"><img src={check} alt="check"/>In Stock</div>
                 ) : null 
             }
             {
                 summary.fast_dispatch ? (
-                    <div><img src={check} alt="check"/>Fast Dispatch</div>
+                    <div className="product-prop secondary-prop"><img src={check} alt="check"/>Fast Dispatch</div>
                 ) : null 
             }
         

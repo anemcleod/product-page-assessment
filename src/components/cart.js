@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import {DataContext} from '../dataContext';
 
 import info from '../assets/icons/info.png';
+import mail from '../assets/icons/mail.png';
 
 const Cart = () => {
     const {cart, setCart} = useContext(DataContext);
@@ -65,8 +66,11 @@ const Cart = () => {
             }
             
             <div className="buttons-container">
-                <button>Login to Purchase</button>
-                <button>icon Contact the Supplier</button>
+                <button className="btn login-btn">Login to Purchase</button>
+                <button className="btn contact-btn">
+                    <img src={mail} alt="mail"/>
+                    Contact the Supplier
+                </button>
             </div>
         </div>
     )
