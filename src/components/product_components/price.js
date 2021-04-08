@@ -13,9 +13,9 @@ const Price = ({options}) => {
 
     return (
         <div className="product-price">
-            <div className="price">
-                {`${symbol} ${Math.min(...priceRange)} - ${Math.max(...priceRange)}`}
-                <span>/options <span>{optionKeys.length} Options</span> (Min.Order)</span>  
+            <div>
+                <span className="price">{`${symbol} ${Math.min(...priceRange)} - ${Math.max(...priceRange)}`}</span>
+                <span className="secondary-price">/option <span className="option-price">{optionKeys.length} Options</span> (Min.Order)</span>  
             </div>
             <div className="old-price"> {`${symbol} ${Math.min(...oldPriceRange)} - ${Math.max(...oldPriceRange)}`}</div>
         </div>

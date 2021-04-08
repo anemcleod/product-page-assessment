@@ -5,8 +5,9 @@
     flex-basis: 942px
     justify-content: center
 
+
 .product-image-container
-    flex-basis: 416px
+    flex-basis: 360px
     img
         width: 100%
         object-fit: contain
@@ -14,6 +15,7 @@
 
 .product-details-container
     flex-basis: 526px
+
 
 //======================== props =============================
 .product-props   
@@ -64,8 +66,6 @@
     overflow-x: hidden
     margin-right: 0.25rem
     
-
-    
 .review-rating
     color:#FF6600
 .review-count
@@ -74,4 +74,154 @@
 .buyer-count
     margin-left: 2rem
    
+//=========================== price ============================
 
+.product-price
+    padding: 1rem 
+    font-size: 0.875rem
+    border-bottom: 1px solid #E6E7EB
+    border-top: 1px solid #E6E7EB
+.price
+    font-size: 1rem
+    color: #FF6600
+    font-weight: 700
+.secondary-price 
+    color: #999999
+    margin-left: 0.875rem
+.option-price
+    margin-left: 0.875rem
+.old-price
+    text-decoration: line-through
+    color: #999999
+
+//========================= shipping-offers =======================
+
+.shipping-offers
+    margin: 1rem 0
+    background-color: #FFF0E6
+    font-size: 0.875rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.offers-summary
+    flex-shrink: 0
+    color: #FF6600
+    position: relative
+    &:before
+        position: absolute
+        top: 50%
+        left: -10px
+        content: ""
+        width: 3px
+        height: 3px
+        border-radius: 50%
+        background-color: #FF6600
+.optional-offers-summary
+    display: none
+.march-expo
+    height: 40px
+.arrow
+    margin-right: 1rem
+
+//========================= discount =======================
+
+.product-discount-container
+    justify-content: space-between
+    margin: 1rem 0
+.product-discount-container, .product-discount
+    color: #999999
+    display: flex
+    align-items: center
+    padding: 0.25rem
+
+.product-discount, .product-discount-amount
+    font-size: 0.875rem
+
+.product-discount
+    img
+        margin: 0 1rem
+
+.product-discount-amount
+    color: #FF6600
+    margin-right: 0.75rem
+
+//========================= options ==================
+
+.product-options
+    display: flex
+    justify-content: space-between
+   
+.product-options-label
+    color: #999999
+    display: none
+.product-option
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin: 1rem 0
+.product-option-label
+    flex-grow: 1
+
+.product-option-price
+    min-width: 80px
+    padding-left: 0.5rem
+
+
+//========================= qty ==================
+form
+    display: flex
+    border: 1px solid #E6E7EB
+    border-radius: 2px
+    
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+input[type=number] 
+    -moz-appearance: textfield
+    text-align: center
+    border: none
+    color: #999999
+.count-btn
+    height: 40px
+    width: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #ffffff
+    cursor: pointer
+    border: 1px solid #FF6600
+
+.count-btn-right
+    border-radius: 0 2px 2px 0
+.count-btn-left
+    border-radius: 2px 0 0 2px 
+.disabled
+    border: 1px solid #E6E7EB
+    cursor: default
+
+.hide-button
+    width: 40px
+    height: 40px
+
+//========================= vendors ==================
+
+.vendor-details
+    div
+        color:#999999
+        font-size: 0.75rem
+        margin-bottom: 1rem 
+        img
+            margin-right: 0.25rem
+        span
+            color:#999999
+            font-weight: 700
+            font-size: 0.875rem
+//========================= media queries ==================
+@media (min-width: 768px)
+    .optional-offers-summary
+        display: inline-block
+    .product-options-label
+        display: inline-block
+    .hide-button
+        width: 80px

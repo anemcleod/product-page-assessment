@@ -2,11 +2,11 @@ import star from '../../assets/icons/star.png';
 
 const Reviews = ({reviews}) => {
     let stars = [];
-    for(let i = 1; i < reviews.rating; i++){
+    for(let i = 0; i < reviews.rating; i++){
         stars.push(1);
     }
     if(reviews.rating % 1 > 0){
-       stars.push (reviews.rating % 1);
+       stars.splice(stars.length-1, 1, reviews.rating % 1);
     }
 
     return (

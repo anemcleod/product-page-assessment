@@ -95,7 +95,7 @@ const Qty = ({min, max, step, product, option}) => {
     return (
         <form>
             <button 
-                className={`count-btn ${inputRef.current === min ? 'disabled' : ''}`}
+                className={`count-btn count-btn-left ${inputRef.current === min ? 'disabled' : ''}`}
                 onClick={decrement}>
                <img src={minus} alt="minus"/>
             </button>
@@ -108,7 +108,7 @@ const Qty = ({min, max, step, product, option}) => {
                 max={max}
             />
              <button 
-                className={`count-btn ${inputRef.current === max ? 'disabled' : ''}`}
+                className={`count-btn count-btn-right ${inputRef.current === max ? 'disabled' : ''}`}
                 onClick={increment}>
                 <img src={plus} alt="plus"/>
             </button>

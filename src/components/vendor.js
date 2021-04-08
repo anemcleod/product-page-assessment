@@ -17,9 +17,11 @@ const Vendor = () => {
                 <img src={mastercard} alt="mastercard"/>
                 <img src={applepay} alt="applepay"/>
             </div>
+            <div className="vendor-notes">
+                <div>Alibaba.com Logistics</div>
+                <div>Inspection Solutions</div>
+            </div> 
             
-            <div>Alibaba.com Logistics</div>
-            <div>Inspection Solutions</div>
         </div>
     )
 }
