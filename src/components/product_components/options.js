@@ -4,7 +4,7 @@ const Options = ({product}) => {
     return (
         <div className="product-options">
         <div className="product-options-label">Options</div>
-        <div>
+        <div className="product-option-container">
             {
                 Object.keys(product.options).map((option, index) => {
                     return (

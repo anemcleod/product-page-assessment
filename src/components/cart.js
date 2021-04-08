@@ -36,27 +36,27 @@ const Cart = () => {
                                         return (
                                             <div className="cart-item" key={i}>
                                                 <div>{item.option.label}</div>
-                                                <div>{item.qty}</div>
-                                                <div>{`${item.option.price.currency.symbol} ${(Math.round(item.option.price.value * item.qty * 100) / 100).toFixed(2)}`}</div>
+                                                <div>QTY {item.qty}</div>
+                                                <div className="cart-item-price">{`${item.option.price.currency.symbol} ${(Math.round(item.option.price.value * item.qty * 100) / 100).toFixed(2)}`}</div>
                                             </div>
                                         )
                                     }
 
                                 })
                             }
-                            <div className="shipping-method">
+                            <div className="shipping-details shipping-method">
                                 <div>Ship to <span>{product.shipping.method.country}</span> by <span>{product.shipping.method.title}</span></div>
-                                <div>{`${product.shipping.method.cost.currency.symbol} ${product.shipping.method.cost.value}`}</div>
+                                <div className="shipping-price">{`${product.shipping.method.cost.currency.symbol} ${product.shipping.method.cost.value.toFixed(2)}`}</div>
                             </div>  
 
-                            <div className="shipping-lead">
+                            <div className="shipping-details shipping-lead" data-tooltip={product.shipping.lead_time.info}>
                                 {`Lead time ${product.shipping.lead_time.value}`}
-                                <img src={info} alt="info" data-tooltip={product.shipping.lead_time.info}/>
+                                <img className="info shipping-lead-info"src={info} alt="info" />
                             </div>
                             
-                            <div className="shipping-time">
+                            <div className="shipping-details shipping-time " data-tooltip={product.shipping.method.shipping_time.info}>
                                 {`Shipping time ${product.shipping.method.shipping_time.value} `}
-                                <img src={info} alt="info" data-tooltip={product.shipping.method.shipping_time.info}/>
+                                <img className="info shipping-time-info" src={info} alt="info" />
                             </div>
                         </div>
                     )

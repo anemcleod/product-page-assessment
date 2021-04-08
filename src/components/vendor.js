@@ -8,11 +8,11 @@ const Vendor = () => {
         <div className="vendor-details">
             <div>
                 <img src={shield} alt="shield"/>
-                <span>Trade Assurance</span> protects your Alibaba.com orders
+                <span className="trade-assurance">Trade Assurance</span> protects your Alibaba.com orders
             </div>
 
             <div>
-                Payments:
+                <span className="payment-types">Payments:</span> 
                 <img src={visa} alt="visa"/>
                 <img src={mastercard} alt="mastercard"/>
                 <img src={applepay} alt="applepay"/>

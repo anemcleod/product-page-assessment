@@ -1,6 +1,64 @@
 .product-cart-container
     flex-basis: 306px
+    flex-grow: 1
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    div, span
+        color: #999999
+        font-size: 0.875rem
+
+
+//====================== order ==========================
+.cart-item
+    margin: 1rem 0
+    display: flex
+    justify-content: space-between
+    div
+        width: 30%
     
+        
+
+//====================== shipping ==========================
+
+.product-cart-container
+    .shipping-price, .cart-item-price
+        font-weight: 700
+        color: #333333
+        text-align: right
+.info
+    margin-left: 1.5rem
+
+.shipping-method
+    display: flex
+    div
+        min-width: 150px
+
+
+
+.shipping-lead, .shipping-time
+    display: flex
+    align-items: center
+    position: relative
+
+.shipping-lead::before, .shipping-time::before
+    display: none
+    content: attr(data-tooltip)
+    position: absolute
+    bottom: 0
+    z-index: 10
+    padding: 0.75rem
+    font-size: 0.75rem
+    border-radius: 2px
+    color: #FF6600
+    background-color: #FFF0E6
+
+.shipping-lead:hover::before, .shipping-time:hover::before
+    display: inline-block
+
+.shipping-details
+    margin: 1rem 0
+//====================== buttons ==========================  
 
 .buttons-container
     display: flex
@@ -8,6 +66,7 @@
     padding: 0.625rem
     .btn
         width: 90%
+        min-width: 260px
         border-radius: 2em
         font-size: 0.875rem
         padding: 0.875rem
@@ -17,6 +76,11 @@
     .login-btn
         background-color: #FF6600
         color: #FFFFFF
+        border: 2px solid #FF6600
+        transition: transform 0.5s ease
+        &:hover
+            transform: scale(1.025)
+            
     .contact-btn
         display: flex
         justify-content: center
@@ -24,6 +88,15 @@
         background-color:  #FFFFFF
         color: #FF6600
         border: 2px solid #FF6600
+        transition: transform 0.5s ease
+        &:hover
+           transform: scale(1.025)
         img
             margin-right: 0.313rem
-        
+
+//========================= media queries ==================
+@media (min-width: 1280px)
+    .product-cart-container
+        flex-direction: column
+        justify-content: flex-start
+        flex-grow: 0
