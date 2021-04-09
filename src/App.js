@@ -16,7 +16,6 @@ function App() {
       .then(res => res.json())
       .then(data => {
           if(data.success){
-              console.log(data);
               setProduct(data.product);
               setIsLoading(false)
           } 

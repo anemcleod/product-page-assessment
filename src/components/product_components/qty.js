@@ -56,7 +56,7 @@ const Qty = ({min, max, step, product, option}) => {
                  return copyCart;
           
             });
-        } console.log(cart);  
+        }
     };
 
     const count = (e) => {
